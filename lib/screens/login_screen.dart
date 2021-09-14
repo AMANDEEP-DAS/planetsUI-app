@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planets_app/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -39,28 +40,33 @@ class LoginScreen extends StatelessWidget {
             ),
             Align(
               alignment: Alignment.topRight,
-              child: Container(
-                padding: EdgeInsets.only(bottom: 30,left: 30),
-                height: MediaQuery.of(context).size.height/7,
-                width: MediaQuery.of(context).size.width/2,
-                decoration: BoxDecoration(
-                  color: Color(0xff1fd1a5),
-                  borderRadius: BorderRadius.only(bottomLeft:Radius.circular(50)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade800.withOpacity(0.5),
-                      spreadRadius: 10,
-                      blurRadius: 10,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Skip',style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),)
-                  ],
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>HomeScreen()));
+                },
+                child: Container(
+                  padding: EdgeInsets.only(bottom: 30,left: 30),
+                  height: MediaQuery.of(context).size.height/7,
+                  width: MediaQuery.of(context).size.width/2,
+                  decoration: BoxDecoration(
+                    color: Color(0xff1fd1a5),
+                    borderRadius: BorderRadius.only(bottomLeft:Radius.circular(50)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade800.withOpacity(0.5),
+                        spreadRadius: 10,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Skip',style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),)
+                    ],
+                  ),
                 ),
               ),
             ),
