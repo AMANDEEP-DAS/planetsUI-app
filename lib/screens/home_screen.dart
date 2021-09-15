@@ -20,8 +20,26 @@ class HomeScreen extends StatelessWidget {
                 // mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Search',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
-                  Text('for planets',style: TextStyle(fontSize: 30,color: Colors.white)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width/2,
+                        // color: Colors.blue,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Search',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
+                            Text('for planets',style: TextStyle(fontSize: 30,color: Colors.white)),
+                          ],
+                        ),
+                      ),
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: NetworkImage('http://3.bp.blogspot.com/_QgE0riHYGGE/TOl3t-zcWcI/AAAAAAAAAAY/0X0XQpuojBs/s1600/profile_cristiano_ronaldo.jpg'),
+                      )
+                    ],
+                  ),
                   SizedBox(height: 20,),
                   Container(
                     // color: Colors.blue,
@@ -65,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     )
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 40,),
                   Text('Popular',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
                   Text('categories',style: TextStyle(fontSize: 30,color: Colors.white)),
                   SizedBox(height: 10,),
@@ -104,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 50,),
+                  SizedBox(height: 40,),
                   Text('Last Viewed',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
                   SizedBox(height: 20,),
                   Row(
