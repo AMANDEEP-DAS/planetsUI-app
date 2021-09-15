@@ -61,6 +61,42 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 )
+              ),
+              SizedBox(height: 20,),
+              Text('Popular',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
+              Text('categories',style: TextStyle(fontSize: 30,color: Colors.white)),
+              SizedBox(height: 10,),
+              Container(
+                height: 70,
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Container(width: 200,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade800,
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                      ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(width: 200,
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade800,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(width: 200,
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade800,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               )
             ],
           ),
