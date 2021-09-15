@@ -13,95 +13,157 @@ class HomeScreen extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: SafeArea(
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Search',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
-              Text('for planets',style: TextStyle(fontSize: 30,color: Colors.white)),
-              SizedBox(height: 20,),
-              Container(
-                // color: Colors.blue,
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey.shade800,
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: ListTile(
-                        leading: Icon(Icons.search,color: Colors.white,),
-                        title: TextField(
-                          cursorColor: Colors.white,
-                          style: TextStyle(
-                            color: Colors.white
+          child: ScrollConfiguration(
+            behavior: MyBehavior(),
+            child: SingleChildScrollView(
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Search',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
+                  Text('for planets',style: TextStyle(fontSize: 30,color: Colors.white)),
+                  SizedBox(height: 20,),
+                  Container(
+                    // color: Colors.blue,
+                    child: Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade800,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
                           ),
-                          decoration: InputDecoration(
-                              hintText: 'Search...',
-                              hintStyle: TextStyle(
-                                color: Colors.grey.shade400,
-                                fontSize: 18,
+                          child: ListTile(
+                            leading: Icon(Icons.search,color: Colors.white,),
+                            title: TextField(
+                              cursorColor: Colors.white,
+                              style: TextStyle(
+                                color: Colors.white
                               ),
-                              border: InputBorder.none
+                              decoration: InputDecoration(
+                                  hintText: 'Search...',
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey.shade400,
+                                    fontSize: 18,
+                                  ),
+                                  border: InputBorder.none
+                              ),
+                            ),
                           ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                              color: Colors.deepOrangeAccent,
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
+                            ),
+                            child: Icon(Icons.filter_list,color: Colors.white,size: 30,),
+                          ),
+                        )
+                      ],
+                    )
+                  ),
+                  SizedBox(height: 20,),
+                  Text('Popular',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
+                  Text('categories',style: TextStyle(fontSize: 30,color: Colors.white)),
+                  SizedBox(height: 10,),
+                  Container(
+                    height: 70,
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 10),
+                      child: ScrollConfiguration(
+                        behavior: MyBehavior(),
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(width: 200,
+                            decoration: BoxDecoration(
+                                color: Colors.grey.shade800,
+                                borderRadius: BorderRadius.all(Radius.circular(20))
+                            ),
+                            ),
+                            SizedBox(width: 10,),
+                            Container(width: 200,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey.shade800,
+                                  borderRadius: BorderRadius.all(Radius.circular(20))
+                              ),
+                            ),
+                            SizedBox(width: 10,),
+                            Container(width: 200,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey.shade800,
+                                  borderRadius: BorderRadius.all(Radius.circular(20))
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.deepOrangeAccent,
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
-                        ),
-                        child: Icon(Icons.filter_list,color: Colors.white,size: 30,),
-                      ),
-                    )
-                  ],
-                )
-              ),
-              SizedBox(height: 20,),
-              Text('Popular',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
-              Text('categories',style: TextStyle(fontSize: 30,color: Colors.white)),
-              SizedBox(height: 10,),
-              Container(
-                height: 70,
-                width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
+                  ),
+                  SizedBox(height: 50,),
+                  Text('Last Viewed',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
+                  SizedBox(height: 20,),
+                  Row(
                     children: [
-                      Container(width: 200,
-                      decoration: BoxDecoration(
-                          color: Colors.grey.shade800,
-                          borderRadius: BorderRadius.all(Radius.circular(20))
-                      ),
-                      ),
-                      SizedBox(width: 10,),
-                      Container(width: 200,
+                      Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width/2.3,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade800,
+                            color: Colors.lime,
                             borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
                       ),
                       SizedBox(width: 10,),
-                      Container(width: 200,
+                      Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width/2.3,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade800,
+                            color: Colors.blueGrey,
                             borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
-                      ),
+                      )
                     ],
                   ),
-                ),
-              )
-            ],
+                  SizedBox(height: 10,),
+                  Row(
+                    children: [
+                      Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width/2.3,
+                        decoration: BoxDecoration(
+                            color: Colors.greenAccent,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width/2.3,
+                        decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
     );
+  }
+}
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }
