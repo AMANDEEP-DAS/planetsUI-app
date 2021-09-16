@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planets_app/screens/bottom_nav_bar.dart';
 import 'package:planets_app/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -42,7 +43,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.topRight,
               child: GestureDetector(
                 onTap: (){
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>HomeScreen()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>BottomNav()));
                 },
                 child: Container(
                   padding: EdgeInsets.only(bottom: 30,left: 30),

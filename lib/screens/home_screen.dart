@@ -2,24 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
 
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey.shade800,
-        selectedItemColor: Colors.deepOrangeAccent,
-        unselectedItemColor: Colors.white,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home,size: 30,),label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.search,size: 30,),label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.category,size: 30,),label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle,size: 30,),label: ''),
-        ],
-      ),
       body: Container(
         padding: EdgeInsets.only(left: 15,top: 15),
         color: Colors.black87,
