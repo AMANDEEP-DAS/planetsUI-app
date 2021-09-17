@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planets_app/screens/cat_screen.dart';
 import 'package:planets_app/screens/home_screen.dart';
 
 class BottomNav extends StatefulWidget {
@@ -12,8 +13,8 @@ class _BottomNavState extends State<BottomNav> {
   int _currentIndex = 0;
   final screens =[
     HomeScreen(),
-    Center(child: Text('search'),),
-    Center(child: Text('categories'),),
+    Center(child: Text('chat'),),
+    CatScreen(),
     Center(child: Text('profile'),)
   ];
   @override
@@ -27,7 +28,7 @@ class _BottomNavState extends State<BottomNav> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home,size: 30,),label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.search,size: 30,),label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.chat,size: 30,),label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.category,size: 30,),label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.account_circle,size: 30,),label: ''),
         ],
