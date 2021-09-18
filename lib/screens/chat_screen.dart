@@ -25,6 +25,30 @@ class _ChatScreenState extends State<ChatScreen> {
                 children: [
                   Text('Chats',style: TextStyle(fontWeight: FontWeight.w900,fontSize: 30,color: Colors.white),),
                   SizedBox(height: 20,),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.grey.shade800,
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                    ),
+                    child: ListTile(
+                      leading: Icon(Icons.search,color: Colors.white,),
+                      title: TextField(
+                        cursorColor: Colors.white,
+                        style: TextStyle(
+                            color: Colors.white
+                        ),
+                        decoration: InputDecoration(
+                            hintText: 'Search for chat...',
+                            hintStyle: TextStyle(
+                              color: Colors.grey.shade400,
+                              fontSize: 18,
+                            ),
+                            border: InputBorder.none
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10,),
                   ListTile(
                     contentPadding: EdgeInsets.only(left: 0.0),
                     trailing: Column(
