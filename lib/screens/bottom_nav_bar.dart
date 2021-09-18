@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planets_app/screens/cat_screen.dart';
+import 'package:planets_app/screens/chat_screen.dart';
 import 'package:planets_app/screens/home_screen.dart';
 import 'package:planets_app/screens/profile_screen.dart';
 
@@ -14,7 +15,7 @@ class _BottomNavState extends State<BottomNav> {
   int _currentIndex = 0;
   final screens =[
     HomeScreen(),
-    Center(child: Text('chat'),),
+    ChatScreen(),
     CatScreen(),
     ProfileScreen(),
   ];
