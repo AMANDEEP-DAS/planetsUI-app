@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:planets_app/screens/bottom_nav_bar.dart';
-import 'package:planets_app/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
