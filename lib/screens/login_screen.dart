@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planets_app/screens/bottom_nav_bar.dart';
+import 'package:planets_app/screens/loading_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -42,7 +43,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.topRight,
               child: GestureDetector(
                 onTap: (){
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>BottomNav()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>LoadingScreen()));
                 },
                 child: Container(
                   padding: EdgeInsets.only(bottom: 30,left: 30),
