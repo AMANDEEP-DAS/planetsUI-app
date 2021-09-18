@@ -1,13 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
-
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  bool _switchValue1 = true;
+  bool _switchValue2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +35,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     title: Text('CR7',style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
                     subtitle: Text('View Profile',style: TextStyle(color: Colors.white),),
                     trailing: Icon(Icons.arrow_forward_ios,color: Colors.white,),
+                  ),
+                  ListTile(
+                    contentPadding: EdgeInsets.only(left: 0.0),
+                    title: Text('Dark Mode',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                    subtitle: Text('To reduces battery usage',style: TextStyle(color: Colors.white)),
+                    trailing: CupertinoSwitch(
+                      activeColor: Colors.deepOrangeAccent,
+                      value: _switchValue1,
+                      onChanged: (value) {
+                        setState(() {
+                          _switchValue1 = value;
+                        });
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    contentPadding: EdgeInsets.only(left: 0.0),
+                    title: Text('Data Saver Mode',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                    subtitle: Text('To reduces data usage and additional charges',style: TextStyle(color: Colors.white)),
+                    trailing: CupertinoSwitch(
+                      activeColor: Colors.deepOrangeAccent,
+                      value: _switchValue2,
+                      onChanged: (value) {
+                        setState(() {
+                          _switchValue2 = value;
+                        });
+                      },
+                    ),
                   )
                 ],
               ),
