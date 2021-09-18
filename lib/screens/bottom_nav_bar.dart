@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planets_app/screens/cat_screen.dart';
 import 'package:planets_app/screens/home_screen.dart';
+import 'package:planets_app/screens/profile_screen.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _BottomNavState extends State<BottomNav> {
     HomeScreen(),
     Center(child: Text('chat'),),
     CatScreen(),
-    Center(child: Text('profile'),)
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
